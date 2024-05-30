@@ -1,0 +1,29 @@
+body {background-color: #292626;}
+
+div.navlinks a{
+    float: left;
+    width: 19.6%;
+    height: 30px;
+    text-align: center;
+    font-size: 25px;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+}
+.navlinks div.navicon {
+    width: 2%;
+    height: 30px;
+}
+.navlinks a.active {
+    background-color: chartreuse;
+}
+.navlinks a:hover{
+    background-color: blue;
+}
+
+h3 {color: beige;}
+p {
+    color: chartreuse;
+    font-size: 40px;
+    padding: 30px 20px;
+}

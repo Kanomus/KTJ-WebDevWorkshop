@@ -1,29 +1,262 @@
-body {background-color: #292626;}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
 
-div.navlinks a{
-    float: left;
-    width: 19.6%;
+body {
+    background-color: darkturquoise;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: aliceblue;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px 20px;
+}
+
+.navicon img {
     height: 30px;
+    width: 30px;
+}
+
+.navlinks {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.navlinks li {
+    list-style: none;
+}
+
+.navlinks a {
+    display: block;
     text-align: center;
-    font-size: 25px;
-    background-color: black;
-    color: white;
+    font-size: 18px;
+    color: black;
     text-decoration: none;
+    padding: 10px 15px;
 }
-.navlinks div.navicon {
-    width: 2%;
-    height: 30px;
-}
+
 .navlinks a.active {
     background-color: chartreuse;
 }
-.navlinks a:hover{
-    background-color: blue;
+
+.navlinks a:hover {
+    background-color: aquamarine;
 }
 
-h3 {color: beige;}
+#intro {
+    margin-top: 100px; /* Adjust to account for fixed header */
+    display: flex;
+    background-image: url("Images/notes-bg-transformed-cropped.png");
+    overflow: hidden;
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: lightblue;
+    justify-content: space-evenly;
+    width: 100%;
+    align-items: top;
+    justify-content: center;
+}
+
+.intro-text {
+    flex: 1;;
+}
+.image {
+    align-items: center;
+    flex: 0.2;
+    max-width: 50%;
+    margin-right: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.button {
+    display: inline-block;
+    text-decoration: none;
+    font-size: small;
+    background-color: aliceblue;
+    color: black;
+    padding: 12px 12px;
+    border-radius: 2px;
+    margin: 20px 30px;
+    align-self: center;
+    transition: background-color 0.3s ease;
+}
+.button:hover {
+    background-color: beige;
+}
+h1 {
+    color: beige;
+    text-align: left;
+    padding: 10px 20px;
+    font-size: 30px;
+    text-decoration: underline;
+}
+
 p {
-    color: chartreuse;
-    font-size: 40px;
-    padding: 30px 20px;
+    color: beige;
+    font-size: 20px;
+    padding: 10px 20px;
+}
+.container {
+    display: flex;
+    height: auto;
+    max-width: 100%;
+    margin: 20px 10px;
+    align-items: center;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+}
+.card {
+    flex: 0 0 250px;
+    min-height: 300px;
+    height: auto;
+    margin: 20px 10px;
+    background-color: bisque;
+    border-radius: 3%;
+    scroll-snap-align: start;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.2s ease;
+}
+.card img {
+    width: 100%;
+    height: auto;
+}
+.card p.cardname {
+    color: black;
+    font-size: 15px;
+    top: 3%;
+}
+p.trackno {
+    position: absolute;
+    font-size: 15px;
+    color: black;
+    background-color: azure;
+    border-radius: 20px;
+    top: 5px;
+    right: 5px;
+    padding: 1px;
+    opacity: 70%;
+}
+.artists {
+    font-size: 13px;
+    color: black;
+    opacity: 80%;
+}
+.searchbar {
+    margin: 5px 30px;
+    width: 90%;
+    height: auto;
+    border-radius: 40px;
+    background-color: white;
+    opacity: 60%;
+    padding: 5px 5px;
+}
+.searchbar:hover {
+    opacity: 95%;
+}
+.searchbar p {
+    color: black;
+    opacity: 70%;
+    display: inline;
+    align-self: center;
+}
+
+.searchbar img {
+    position: inherit;
+    opacity: 80%;
+    height: 30px;
+    width: auto;
+    float: right;
+}
+#recommended-container div.card:hover {
+    transform: scale(1.1);
+    overflow: hidden;
+}
+.card:hover button {
+    display: block;
+}
+.card button {
+    position: absolute;
+    display: none;
+    bottom: 40px;
+    right: 5%;
+    background-color: blanchedalmond;
+    color: black;
+    border: none;
+    padding: 3px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.card button:hover {
+    background-color: burlywood;
+}
+.follow-checkbox {
+    display: none;
+}
+.follow-button {
+    background-color: blanchedalmond;
+    padding: 5px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 40px;
+    right: 5%;
+}
+.follow-checkbox:checked + .follow-button {
+    content: attr(data-following-text);
+    background-color: blanchedalmond; /* Change color to indicate following state */
+}
+.follow-button::after {
+    content: "Follow";
+}
+
+.follow-checkbox:checked + .follow-button::after {
+    content: "Following";
+    color: green;
+}
+
+aside {
+    width: 50%;
+    float: right;
+}
+.review-card {
+    background-color: bisque;
+    border-radius: 10px;
+    width: 45%;
+    margin: 20px 20px;
+    color: black;
+}
+.review-card p{
+    color: black;
+    font-size: small;
+}
+.review-form {
+    background-color: aquamarine;
+    border-radius: 10px;
+    float: right;
+    margin-right: 20px;
+    width: 45%;
+}
+form {
+    text-align: center;
+}
+p.username {
+    font-size: medium;
 }

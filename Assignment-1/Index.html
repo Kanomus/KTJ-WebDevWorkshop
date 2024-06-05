@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Homepage</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" type="image/x-icon" href="Images/pngegg.png">
+    </head>
+    <body>
+        <header>
+            <nav class="navbar">
+                <div class="navicon">
+                    <img src="Images/pngegg.png" alt="icon" height="30px" width="30px">
+                </div>
+                <ul class="navlinks">
+                    <li><a href="#intro" class="active">Introduction</a></li>
+                    <li><a href="#featured">Featured</a></li>
+                    <li><a href="#recommended">Recommended</a></li>
+                    <li><a href="#reviews">Reviews</a></li>
+                    <li><a href="#footer">Contact Us</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section id="intro">
+            <div class="intro-text">
+                <h1>Muusic</h1>
+                <p>Your road to heaven, on Earth!</p>
+                <a href="#featured" class="button">Discover playlists</a>
+            </div>
+            <div class="image">
+                <img src="Images/fast-forward-blue-icon.svg" alt="svg image" height="100%" width="100%">
+            </div>
+        </section>
+        <section id="featured">
+            <h1>Featured Playlists</h1>
+            <p>Listen to our top-picks</p>
+            <div class="searchbar">
+                <p>Search for albums...</p>
+                <img src="Images/magnifying-glass.svg">
+            </div>
+            <div class="container">
+                <div class="card">
+                    <img src="Images/Playlists/summer-cover.jpeg" alt="summer-cover">
+                    <input type="checkbox" id="follow1" class="follow-checkbox">
+                    <label for="follow1" class="follow-button"></label>
+                    <p class="cardname">Best of Summer 2021</p>
+                    <p class="trackno">14 tracks</p>
+
+                </div>
+                <div class="card">
+                    <img src="Images/Playlists/lofi-cover.jpeg" alt="lofi-cover">
+                    <input type="checkbox" id="follow2" class="follow-checkbox">
+                    <label for="follow2" class="follow-button"></label>
+                    <p class="cardname">Lofi tracks</p>
+                    <p class="trackno">16 tracks</p>
+                </div>
+                <div class="card">
+                    <img src="Images/Playlists/chill-cover.jpeg" alt="chill-cover">
+                    <input type="checkbox" id="follow3" class="follow-checkbox">
+                    <label for="follow3" class="follow-button"></label>
+                    <p class="cardname">Chill vibes for you</p>
+                    <p class="trackno">20 tracks</p>
+                </div>
+                <div class="card">
+                    <img src="Images/Playlists/happy-cover.jpeg" alt="happy-cover">
+                    <input type="checkbox" id="follow4" class="follow-checkbox">
+                    <label for="follow4" class="follow-button"></label>
+                    <p class="cardname">Happy Hour tracks</p>
+                    <p class="trackno">19 tracks</p>
+                </div>
+                <div class="card">
+                    <img src="Images/Playlists/throwback-cover.jpeg" alt="throwback-cover">
+                    <input type="checkbox" id="follow5" class="follow-checkbox">
+                    <label for="follow5" class="follow-button"></label>
+                    <p class="cardname">Retro songs</p>
+                    <p class="trackno">12 tracks</p>
+                </div>
+            </div>
+        </section>
+        <section id="recommended">
+            <h1>Recommended Albums</h1>
+            <p>Albums, curated specially for you!</p>
+            <div class="container" id="recommended-container">
+                <div class="card">
+                    <img src="Images/Albums/aashiqui-cover.jpeg" alt="aashiqui-cover">
+                    <p class="cardname">Aashiqui 2</p>
+                    <button type="button">Know More</button>
+                    <p class="trackno">11 tracks</p>
+                    <p class="artists">Jeet Ganguli, Ankit Tiwari, Mithoon</p>
+                </div>
+                <div class="card">
+                    <img src="Images/Albums/Different_World-cover.png" alt="Different_World-cover">
+                    <p class="cardname">Different World</p>
+                    <button type="button">Know More</button>
+                    <p class="trackno">15 tracks</p>
+                    <p class="artists">Alan Walker</p>
+                </div>
+                <div class="card">
+                    <img src="Images/Albums/lunch-break-cover.jpeg" alt="lunch-break-cover">
+                    <p class="cardname">Lunch Break</p>
+                    <button type="button">Know More</button>
+                    <p class="trackno">30 tracks</p>
+                    <p class="artists">Seedhe Maut</p>
+                </div>
+                <div class="card">
+                    <img src="Images/Albums/thriller-cover.jpeg" alt="thriller-cover">
+                    <p class="cardname">Thiller</p>
+                    <button type="button">Know More</button>
+                    <p class="trackno">9 tracks</p>
+                    <p class="artists">Michael Jackson</p>
+                </div>
+                <div class="card">
+                    <img src="Images/Albums/etr-cover.jpeg" alt="etr-cover">
+                    <p class="cardname">Ek Tha Raja</p>
+                    <button type="button">Know More</button>
+                    <p class="trackno">16 tracks</p>
+                    <p class="artists">Badshah</p>
+                </div>
+            </div>
+        </section>
+        <section id="reviews">
+            <h1>User Reviews</h1>
+            <aside class="review-form">
+                <p>Tell us about your experience!</p>
+                <form>
+                    <label for="name">Name:</label><br>
+                    <input type="text" id="name"><br><br>
+                    <label for="email">Email:</label><br>
+                    <input type="text" id="email"><br><br>
+                </form>
+            </aside>
+            <div class="review-card">
+                <p class="username">Raja says no</p>
+                <p>I say no</p>
+            </div>
+        </section>
+        <footer id="footer">
+            <h1>Footer</h1>
+        </footer>
+    </body>
+</html>

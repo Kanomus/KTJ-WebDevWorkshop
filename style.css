@@ -1,3 +1,12 @@
+/* CSS HEX */
+:root {
+    --ultra-violet: #5e548eff;
+    --mint-green: #bee9e8ff;
+    --black: #020202ff;
+    --plum-web: #d68fd6ff;
+    --columbia-blue: #cae9ffff;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -6,7 +15,7 @@
 }
 
 body {
-    background-color: darkturquoise;
+    background-color: var(--ultra-violet);
     font-family: Arial, sans-serif;
 }
 
@@ -15,7 +24,7 @@ header {
     width: 100%;
     top: 0;
     left: 0;
-    background-color: aliceblue;
+    background-color: var(--plum-web);
     z-index: 1000;
 }
 
@@ -52,11 +61,11 @@ header {
 }
 
 .navlinks a.active {
-    background-color: chartreuse;
+    background-color: var(--ultra-violet);
 }
 
 .navlinks a:hover {
-    background-color: aquamarine;
+    background-color: var(--columbia-blue);
 }
 
 #intro {
@@ -67,7 +76,7 @@ header {
     background-position: left;
     background-repeat: no-repeat;
     background-size: cover;
-    background-color: lightblue;
+    background-color: var(--plum-web);
     justify-content: space-evenly;
     width: 100%;
     align-items: top;
@@ -89,7 +98,7 @@ header {
     display: inline-block;
     text-decoration: none;
     font-size: small;
-    background-color: aliceblue;
+    background-color: var(--mint-green);
     color: black;
     padding: 12px 12px;
     border-radius: 2px;
@@ -98,10 +107,10 @@ header {
     transition: background-color 0.3s ease;
 }
 .button:hover {
-    background-color: beige;
+    background-color: var(--columbia-blue);
 }
 h1 {
-    color: beige;
+    color: var(--columbia-blue);
     text-align: left;
     padding: 10px 20px;
     font-size: 30px;
@@ -109,7 +118,7 @@ h1 {
 }
 
 p {
-    color: beige;
+    color: var(--columbia-blue);
     font-size: 20px;
     padding: 10px 20px;
 }
@@ -127,7 +136,7 @@ p {
     min-height: 300px;
     height: auto;
     margin: 20px 10px;
-    background-color: bisque;
+    background-color: var(--columbia-blue);
     border-radius: 3%;
     scroll-snap-align: start;
     overflow: hidden;
@@ -146,8 +155,8 @@ p {
 p.trackno {
     position: absolute;
     font-size: 15px;
-    color: black;
-    background-color: azure;
+    color: white;
+    background-color: var(--black);
     border-radius: 20px;
     top: 5px;
     right: 5px;
@@ -197,8 +206,8 @@ p.trackno {
     display: none;
     bottom: 40px;
     right: 5%;
-    background-color: blanchedalmond;
-    color: black;
+    background-color: var(--plum-web);
+    color: white;
     border: none;
     padding: 3px;
     border-radius: 5px;
@@ -206,13 +215,14 @@ p.trackno {
     transition: background-color 0.3s ease;
 }
 .card button:hover {
-    background-color: burlywood;
+    background-color: var(--ultra-violet);
 }
 .follow-checkbox {
     display: none;
 }
 .follow-button {
-    background-color: blanchedalmond;
+    background-color: var(--plum-web);
+    color: white;
     padding: 5px;
     border-radius: 5px;
     position: absolute;
@@ -221,7 +231,7 @@ p.trackno {
 }
 .follow-checkbox:checked + .follow-button {
     content: attr(data-following-text);
-    background-color: blanchedalmond; /* Change color to indicate following state */
+    background-color: var(--plum-web); /* Change color to indicate following state */
 }
 .follow-button::after {
     content: "Follow";
@@ -234,10 +244,11 @@ p.trackno {
 
 aside {
     width: 50%;
+    height: auto;
     float: right;
 }
 .review-card {
-    background-color: bisque;
+    background-color: var(--mint-green);
     border-radius: 10px;
     width: 45%;
     margin: 20px 20px;
@@ -248,15 +259,107 @@ aside {
     font-size: small;
 }
 .review-form {
-    background-color: aquamarine;
+    background-color: var(--mint-green);
     border-radius: 10px;
     float: right;
-    margin-right: 20px;
+    margin: 20px 20px;
     width: 45%;
 }
+.review-form p{
+    font-size: 30px;
+    color: black;
+}
 form {
-    text-align: center;
+    text-align: left;
+    padding-left: 20px;
 }
 p.username {
     font-size: medium;
+}
+#review{
+    min-width: 60%;
+    min-height: 100px;
+    width: auto;
+    height: auto;
+    text-wrap: wrap;
+}
+.review-form button {
+    font-size: large;
+    margin: 20px 20px;
+    min-width: 50px;
+    min-height: 20px;
+    width: auto;
+    height: auto;
+    background-color: var(--mint-green);
+}
+.star-rating {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: left;
+}
+
+.star-rating input {
+    display: none;
+}
+
+.star-rating label {
+    font-size: 25px;
+    color: gray;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.star-rating input:checked ~ label,
+.star-rating label:hover,
+.star-rating label:hover ~ label {
+    color: gold;
+}
+.star-rating-display {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    font-size: 20px;
+    color: gold;
+}
+.reviews-container {
+    overflow-y: scroll;
+    width: 45%;
+    height: 500px;
+}
+.review-card {
+    position: relative;
+    width: 90%;
+    height: auto;
+}
+.review-card img {
+    width: 30px;
+    height: auto;
+    margin-top: 5px;
+    margin-left: 5px;
+    display: inline;
+    border-radius: 20px;
+}
+p.username {
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+footer {
+    background-color: var(--black);
+    color: white;
+}
+.footer-link img{
+    display: inline;
+    height: 20px;
+    width: auto;
+    background-color: white;
+    border-radius: 2px;
+    overflow: hidden;
+}
+footer a {
+    text-decoration: none;
+    font-size: 20px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    color: var(--columbia-blue);
 }

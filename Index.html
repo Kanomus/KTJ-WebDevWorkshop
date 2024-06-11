@@ -27,7 +27,7 @@
                 <a href="#featured" class="button">Discover playlists</a>
             </div>
             <div class="image">
-                <img src="Images/fast-forward-blue-icon.svg" alt="svg image" height="100%" width="100%">
+                <img src="Images/OnlineWebFonts_COM_Icons_3108e9d327080123187047fc6ed1899f/music.svg" alt="svg image" height="100%" width="100%">
             </div>
         </section>
         <section id="featured">
@@ -123,18 +123,70 @@
                 <p>Tell us about your experience!</p>
                 <form>
                     <label for="name">Name:</label><br>
-                    <input type="text" id="name"><br><br>
+                    <input type="text" id="name" name="name" required><br><br>
+                    
                     <label for="email">Email:</label><br>
-                    <input type="text" id="email"><br><br>
+                    <input type="email" id="email" name="email" required><br><br>
+
+                    <label for="rating">Rating:</label>
+                    <div class="star-rating">
+                        <input type="radio" id="star1" name="rating" value="1"><label for="star1">★</label>
+                        <input type="radio" id="star2" name="rating" value="2"><label for="star2">★</label>
+                        <input type="radio" id="star3" name="rating" value="3"><label for="star3">★</label>
+                        <input type="radio" id="star4" name="rating" value="4"><label for="star4">★</label>
+                        <input type="radio" id="star5" name="rating" value="5"><label for="star5">★</label>
+                    </div><br>
+
+                    <label for="review">Review:</label><br>
+                    <textarea id="review" name="review" rows="4" required></textarea><br>
+
+                    <button type="submit">Submit</button>
                 </form>
             </aside>
-            <div class="review-card">
-                <p class="username">Raja says no</p>
-                <p>I say no</p>
+            <div class="reviews-container">
+                <div class="review-card">
+                    <img src="Images/user-image.jpg" alt="profile-pic">
+                    <p class="username">Pintu</p>
+                    <div class="star-rating-display" data-rating="4">
+                        ★★★★☆
+                    </div>
+                    <p>Beautiful</p>
+                </div>
+                <div class="review-card">
+                    <img src="Images/user-image.jpg" alt="profile-pic">
+                    <p class="username">Avid-user3445</p>
+                    <div class="star-rating-display" data-rating="4">
+                        ★★★★☆
+                    </div>
+                    <p>Pretty neat, felt nice</p>
+                </div>
+                <div class="review-card">
+                    <img src="Images/user-image.jpg" alt="profile-pic">
+                    <p class="username">Yazoohi</p>
+                    <div class="star-rating-display" data-rating="4">
+                        ★☆☆☆☆
+                    </div>
+                    <p>Severe lack of functionality, would not recommend</p>
+                </div>
             </div>
+            
         </section>
         <footer id="footer">
-            <h1>Footer</h1>
+            <h1>Follow us!</h1><br><br>
+            <div class="footer-link">
+                <a href="not-imp.html">Instagram</a>
+                <img src="Images/ig-logo.png" alt="ig-logo">
+            </div>
+            <div class="footer-link">
+                <a href="not-imp.html">X / Twitter</a>
+                <img src="Images/X-logo.png" alt="X-logo">
+            </div>
+            <div class="footer-link">
+                <a href="not-imp.html">Terms and Conditions</a>
+            </div>
+            <div class="footer-link">
+                <a href="not-imp.html">Privacy Policy</a>
+            </div>
         </footer>
     </body>
 </html>

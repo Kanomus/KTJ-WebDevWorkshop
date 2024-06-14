@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="script.js"></script>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <title>Tic-Tac-Toe</title>
+        <link rel="icon" type="image/x-icon" href="Images/tictactoe_icon.png">
+    </head>
+    <body>
+        <h1>Let's Play!</h1>
+        <div id="controls">
+            <button onclick="createGrid(3)">3x3</button>
+            <button onclick="createGrid(4)">4x4</button>
+            <button onclick="createGrid(5)">5x5</button>
+            <button onclick="createGrid(6)">6x6</button>
+        </div>
+        
+        <div id="turn-indicator">Current Turn: X</div>
+        <div id="grid"></div>
+        <button onclick="showResetModal()">Reset</button>
+
+        <div id="scoreboard">
+            <h2>Scoreboard</h2>
+            <div id="player1-score">
+                Player 1: <span id="player1-score-value">0</span>
+            </div>
+            <div id="player2-score">
+                Player 2: <span id="player2-score-value">0</span>
+            </div>
+        </div>
+
+        <div id="reset-modal" class="modal">
+            <div class="modal-content">
+                <p>Are you sure you want to reset?</p>
+                <p>This will clear the current board</p>
+                <button onclick="confirmReset()">Reset</button>
+                <button onclick="hideResetModal()">Cancel</button>
+            </div>
+        </div>
+        <div id="result"></div>
+    </body>
+</html>

@@ -1,9 +1,10 @@
 h1 {
     text-align: center;
-    font-size: 25;
+    font-size: 40;
     color: coral;
 }
 body {
+    font-family: sans-serif;
     background-color: antiquewhite;
     display: flex;
     align-items: center;
@@ -13,6 +14,16 @@ body {
 
 #controls {
     margin-bottom: 20px;
+}
+#controls button {
+    background-color: antiquewhite;
+    transition: 0.4s;
+    margin: 10px;
+    font-size: 20px;
+    border-radius: 5px;
+}
+#controls button:hover {
+    background-color: beige;
 }
 #grid {
     position: relative;
@@ -41,24 +52,46 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    display: none; /* Initially hide the result */
-    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
+    display: none;
+    background-color: rgba(255, 255, 255, 0.9);
     padding: 20px;
     border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
-    z-index: 1000; /* Ensure the result appears above the grid */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 10;
 }
 #scoreboard {
     position: absolute;
     top: 50%;
-    right: 5%; /* Adjust as needed */
+    right: 10%;
     transform: translateY(-50%);
-    width: 200px; /* Adjust as needed */
+    min-width: fit-content;
+    width: 20%;
     background-color: #f0f0f0;
     border: 1px solid #ccc;
     border-radius: 5px;
-    padding: 20px;
+    padding: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-size: 18px;
+}
+#scoreboard div {
+    margin-bottom: 10px;
+}
+#scoreboard button {
+    font-size: 18px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#scoreboard button.changename {
+    font-size: 15px;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    transition: 0.3s;
+}
+#scoreboard button.changename:hover {
+    color: white;
+    background-color: grey;
 }
 .modal {
     display: none;

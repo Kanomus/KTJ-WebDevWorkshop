@@ -1,17 +1,15 @@
 let currentPlayer = "X";
 let currsize = 3;
 let gridCells = [];
-let player1Score = parseInt(localStorage.getItem('player1Score')) || 0; // Score tracker for Player X
-let player2Score = parseInt(localStorage.getItem('player2Score')) || 0; // Score tracker for Player O
+let player1Score = parseInt(localStorage.getItem('player1Score')) || 0;
+let player2Score = parseInt(localStorage.getItem('player2Score')) || 0;
+// let player1name = localStorage.getItem('player1name')||"Player 1";
+// let player2name = localStorage.getItem('player2name')||"Player 2";
 
-if (typeof(Storage) !== "undefined") {
-    // localStorage is supported
-} else {
-    // localStorage is not supported
-    alert("Your browser does not support localStorage. Scores won't persist.");
-}
-
-document.addEventListener('DOMContentLoaded', ()=>createGrid(3));
+document.addEventListener('DOMContentLoaded', ()=>{
+    createGrid(3);
+    fetchscores();
+});
 
 function createGrid(size)
 {
@@ -19,10 +17,10 @@ function createGrid(size)
     container.innerHTML='';
     gridCells=[];
 
-    const baseSize = 30; // Base size for the grid in vw units
+    const baseSize = 50; // Base size for the grid in vw units
     const gridSize = baseSize + (size - 3) * 4;
-    container.style.width = `${gridSize}vw`;
-    container.style.height = `${gridSize}vw`;
+    container.style.width = `${gridSize}vh`;
+    container.style.height = `${gridSize}vh`;
 
     container.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
     container.style.gridTemplateRows = `repeat(${size}, 1fr)`;
@@ -144,10 +142,32 @@ function updateScore(player) {
     if (player === 'X') {
         player1Score++;
         localStorage.setItem('player1Score', player1Score);
-        document.getElementById('player1-score-value').textContent = player1Score;
     } else if (player === 'O') {
         player2Score++;
         localStorage.setItem('player2Score', player2Score);
-        document.getElementById('player2-score-value').textContent = player2Score;
     }
+    fetchscores();
 }
+// function changename(player)
+// {
+//     if(player === 'X'){
+        
+//     }
+// }
+function resetScores() {
+    localStorage.removeItem('player1Score');
+    localStorage.removeItem('player2Score');
+    player1Score = 0;
+    player2Score = 0;
+    fetchscores();
+}
+function fetchscores()
+{    
+    document.getElementById('player1-score-value').textContent = player1Score;
+    document.getElementById('player2-score-value').textContent = player2Score;
+}
+// function fetchnames()
+// {
+//     document.getElementById('player1name').textContent = player1name;
+//     document.getElementById('player2name').textContent = player2name;
+// }

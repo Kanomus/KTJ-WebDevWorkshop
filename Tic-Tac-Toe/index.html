@@ -6,7 +6,7 @@
         <script src="script.js"></script>
         <link rel="stylesheet" type="text/css" href="style.css">
         <title>Tic-Tac-Toe</title>
-        <link rel="icon" type="image/x-icon" href="Images/tictactoe_icon.png">
+        <link rel="icon" type="image/x-icon" href="Images/tictactoe.svg">
     </head>
     <body>
         <h1>Let's Play!</h1>
@@ -24,11 +24,14 @@
         <div id="scoreboard">
             <h2>Scoreboard</h2>
             <div id="player1-score">
-                Player 1: <span id="player1-score-value">0</span>
+                <span id="player1name">Player 1: </span> <span id="player1-score-value">0</span>
+                <!-- <button class="changename" onclick="changename('X')">change name</button> -->
             </div>
             <div id="player2-score">
-                Player 2: <span id="player2-score-value">0</span>
+                <span id="player2name">Player 2: </span> <span id="player2-score-value">0</span>
+                <!-- <button class="changename" onclick="changename('O')">change name</button> -->
             </div>
+            <button onclick="resetScores()">reset scores</button>
         </div>
 
         <div id="reset-modal" class="modal">

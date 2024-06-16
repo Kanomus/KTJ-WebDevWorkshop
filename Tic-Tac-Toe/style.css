@@ -59,19 +59,33 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     z-index: 10;
 }
-#scoreboard {
-    position: absolute;
-    top: 50%;
-    right: 10%;
-    transform: translateY(-50%);
-    min-width: fit-content;
-    width: 20%;
-    background-color: #f0f0f0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    font-size: 18px;
+@media (min-width:800px) {
+    #scoreboard {
+        position: absolute;
+        top: 50%;
+        right: 10%;
+        transform: translateY(-50%);
+        min-width: fit-content;
+        width: 20%;
+        background-color: #f0f0f0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        font-size: 18px;
+    }
+}
+@media (max-width:799px) {
+    #scoreboard {
+        margin-top: 30px;
+        width: 40%;
+        background-color: #f0f0f0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        font-size: 18px;
+    }
 }
 #scoreboard div {
     margin-bottom: 10px;

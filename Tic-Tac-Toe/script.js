@@ -17,7 +17,7 @@ function createGrid(size)
     container.innerHTML='';
     gridCells=[];
 
-    const baseSize = 50; // Base size for the grid in vw units
+    const baseSize = 50;
     const gridSize = baseSize + (size - 3) * 4;
     container.style.width = `${gridSize}vh`;
     container.style.height = `${gridSize}vh`;

@@ -27,6 +27,8 @@ body {
 }
 #grid {
     position: relative;
+    max-width: 100%;
+    height: auto;
     display: grid;
     gap: 5px;
     background-color: black;
